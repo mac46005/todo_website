@@ -36,4 +36,12 @@ body {
 .main-container{
     max-width: var(--container-sz-lg);
     margin: 0 auto;
+    position: relative;
+}
+
+header{
+    position: relative;
+    margin-top: 3rem;
+    height: 70vh;
+    background: rgba(26, 26, 26, 0.873);
 }

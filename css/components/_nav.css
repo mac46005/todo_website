@@ -2,7 +2,11 @@ nav{
     background: var(--color-bg1);
     border-left: 3px solid var(--color-bg1);
     border-right: 3px solid var(--color-bg1);
-    box-shadow: 0 12px 20px var(--color-white);
+    /* box-shadow: 0 12px 20px var(--color-white); */
+    position: fixed;
+    top: 0;
+    min-width: var(--container-sz-lg);
+    z-index: 1;
 }
 .nav-container{
     margin: 0 .5rem;
