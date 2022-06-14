@@ -41,3 +41,10 @@
         opacity: 0;
     }
 }
+
+#banner{
+    position: absolute;
+    height: 80%;
+    top: 10%;
+    left: 30%;
+}
