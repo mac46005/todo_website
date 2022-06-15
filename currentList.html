@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,8 +8,10 @@
     <title>Current List</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/components/_nav.css">
+    <link rel="stylesheet" href="./css/components/_table.css">
     <link rel="stylesheet" href="./css/sections/currentList.css">
 </head>
+
 <body>
     <div class="main-container">
 
@@ -39,21 +42,29 @@
         <main>
             <div class="content-container">
                 <table>
-                    <tr>
-                        <th scope="col">Desctiption</th >
-                        <th scope="col">Due</th >
-                        <th scope="col">Date Created</th >
-                        <th scope="col">Completed</th >
-                        <th scope="col">Completed date</th >
-                        <th scope="col">Edit</a></th >
-                        <th scope="col">Delete</th >
-                    </tr>
-                    <tr>
-                        <td>Take Nap</td>
-                        <td>6/15/2022 2200hrs</td>
-                        <td>6/15/2022 600hrs</td>
+                    <thead>
+                        <tr>
+                            <th scope="col">Desctiption</th>
+                            <th scope="col">Due</th>
+                            <th scope="col">Date Created</th>
+                            <th scope="col">Completed</th>
+                            <th scope="col">Completed date</th>
+                            <th scope="col">Edit</a></th>
+                            <th scope="col">Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Take Nap</td>
+                            <td>6/15/2022 2200hrs</td>
+                            <td>6/15/2022 600hrs</td>
+                            <td>FALSE</td>
+                            <td>N/A</td>
+                            <td><button><a href="">Edit</a></button></td>
+                            <td><button><a href="">Delete</a></button></td>
+                        </tr>
+                    </tbody>
 
-                    </tr>
                 </table>
             </div>
         </main>
@@ -66,4 +77,5 @@
 
     </div>
 </body>
+
 </html>

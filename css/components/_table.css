@@ -1,0 +1,44 @@
+table{
+    background: var(--color-bg2);
+    border-radius: .2rem;
+    border: 3px solid rgb(0, 153, 255);
+    padding: 1rem;
+    width: 100%;
+    animation: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+thead tr th{
+    background:rgb(0, 153, 255);
+    padding: .5rem;
+}
+
+tbody tr{
+    margin: 1rem 0;
+
+}
+
+@keyframes glow {
+    0%{
+        border: 3px solid rgba(0, 153, 255,0);
+    }
+    50%{
+        border: 3px solid rgba(0, 153, 255,1);
+    }
+    100%{
+        border: 3px solid rgba(0, 153, 255,0);
+    }
+}
+
+tbody tr.low{
+    background: hwb(0 67% 33% / 0.345);
+}
+tbody tr.medium{
+    background:rgba(239, 163, 11, 0.488);
+}
+tbody tr.high{
+    background:rgba(186, 8, 8, 0.551);
+}
+tbody tr td button{
+    padding: 1rem;
+}
