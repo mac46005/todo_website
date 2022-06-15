@@ -7,6 +7,8 @@
     <title>Add Item</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/components/_nav.css">
+    <link rel="stylesheet" href="./css/components/_form.css">
+    <link rel="stylesheet" href="./css/components/_controls.css">
     <link rel="stylesheet" href="./css/sections/add.css">
 </head>
 <body>
@@ -23,6 +25,27 @@
                 </ul>
             </div>
         </nav>
+        <header>
+
+        </header>
+        <main>
+            <div class="content-container">
+                <form action="">
+                    <legend>Add ToDo Item</legend>
+                    <label for="description">Description:</label>
+                    <input type="text" name="description" id="description">
+                    <br>
+                    <label for="dateDue">Due Date:</label>
+                    <input type="date" name="dateDue" id="dateDue">
+                    <p>Importance Level</p>
+                    <input type="radio" name="importanceLevel" id="importanceLevel" value="low">low
+                    <input type="radio" name="importanceLevel" id="importanceLevel">medium
+                    <input type="radio" name="importanceLevel" id="importanceLevel">high
+                    <br>
+                    <input id="addFormButton" class="disabled" type="submit" value="Add!">
+                </form>
+            </div>
+        </main>
     </div>
 </body>
 </html>

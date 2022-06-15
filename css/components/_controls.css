@@ -1,0 +1,27 @@
+label{
+    font-size: 1.2rem;
+}
+
+input{
+    margin-top: 1rem;
+    font: 1.2rem;
+}
+input[type="text"]{
+    border-radius: .5em;
+    font-size: 1.2rem;
+}
+
+
+input[type="submit"]{
+    padding: 1em;
+    background: linear-gradient(to bottom, rgb(24, 129, 24),rgb(0, 72, 0))
+}
+
+input[type="submit"].disabled{
+
+    background: linear-gradient(to bottom, rgb(130, 130, 130),rgb(92, 92, 92))
+}
+
+input[type="submit"]:hover,input[type="submit"]:focus{
+    background: linear-gradient(to bottom, rgb(2, 255, 2),rgb(0, 72, 0))
+}
