@@ -6,7 +6,9 @@ function show_Time(){
         var hr = today.getHours();
         var minute = today.getMinutes();
         var seconds = today.getSeconds();
-        elTime.innerText = `${hr}:${minute}:${seconds}`;
+        elTime.innerHTML = `${today.getDate()}/${today.getMonth()}/${today.getFullYear()}`;
+        elTime.innerHTML += "<br/>";
+        elTime.innerText += `${hr}:${minute}:${seconds}`;
     },1000)
 }
 
