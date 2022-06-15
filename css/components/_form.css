@@ -10,13 +10,13 @@ form{
 
 @keyframes blink {
     0%{
-        border: 3px solid rgba(128, 0, 128, 1);
+        border: 5px solid rgba(128, 0, 128, 1);
     }
     50%{
-        border: 3px solid rgba(128, 0, 128, 0);
+        border: 5px solid rgba(128, 0, 128, 0);
     }
     100%{
-        border: 3px solid rgba(128, 0, 128, 1);
+        border: 5px solid rgba(128, 0, 128, 1);
     }
 }
 
