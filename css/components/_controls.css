@@ -17,8 +17,11 @@ input[type="submit"]{
     background: linear-gradient(to bottom, rgb(24, 129, 24),rgb(0, 72, 0))
 }
 
-input[type="submit"].disabled{
+input[type="submit"][disabled]{
 
+    background: linear-gradient(to bottom, rgb(130, 130, 130),rgb(92, 92, 92))
+}
+input[type="submit"][disabled]:hover{
     background: linear-gradient(to bottom, rgb(130, 130, 130),rgb(92, 92, 92))
 }
 
