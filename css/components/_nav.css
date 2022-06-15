@@ -29,3 +29,12 @@ nav{
 .nav-menu a:hover{
     border-bottom: 2px solid var(--color-primary);
 }
+#addBtn{
+    background: var(--color-danger);
+    padding: 1rem;
+}
+#addBtn:hover{
+    background: var(--color-success);
+    color: black;
+    font-weight: 900;
+}
