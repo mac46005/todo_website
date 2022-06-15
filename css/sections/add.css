@@ -1,5 +1,5 @@
 header{
-    height: 30vh;
+    height: 25vh;
 }
 @keyframes glowWord {
     0%{
@@ -48,4 +48,7 @@ header{
     animation: transition;
     animation-iteration-count: infinite;
     animation-duration: 4s;
+}
+input:last-child{
+    margin-bottom: 0;
 }
