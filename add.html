@@ -47,9 +47,9 @@
                     <label for="dateDue">Due Date:</label>
                     <input type="date" name="dateDue" id="dateDue" onchange="chkDate();">
                     <p>Importance Level:</p>
-                    <input type="radio" name="importanceLevel" id="importanceLevel1" value="low"><label for="level1">low</label>
-                    <input type="radio" name="importanceLevel" id="importanceLevel2"><label for="level2">medium</label>
-                    <input type="radio" name="importanceLevel" id="importanceLevel3"><label for="level3">high</label>
+                    <input class="rdBtn" type="radio" name="importanceLevel" id="importanceLevel1" value="low" onclick="chkImportance();"><label for="level1">low</label>
+                    <input class="rdBtn" type="radio" name="importanceLevel" id="importanceLevel2" onclick="chkImportance();"><label for="level2">medium</label>
+                    <input class="rdBtn" type="radio" name="importanceLevel" id="importanceLevel3" onclick="chkImportance();"><label for="level3">high</label>
                     <br>
                     <input disabled id="addFormButton" class="disabled" type="submit" value="Add!">
                 </form>

@@ -15,15 +15,22 @@ function chkDate(){
     if(date != null){
         if(date > new Date()){
             console.log('Selected Date is more than today');
+            isDueDateFilled = true;
         }else{
             console.log('Selected Date is less than today');
+            isDueDateFilled = false;
         }
     }
 }
-function chkImportance(value){
-    var elImp1 = document.getElementById('importanceLevel1');
-    var elImp2 = document.getElementById('importanceLevel2');
-    var elImp3 = document.getElementById('importanceLevel3');
+function chkImportance(){
+    var rdBtns = document.querySelectorAll('.rdBtn');
+    for (let i = 0; i < rdBtns.length; i++) {
+        if(rdBtns[i].checked == true){
+            isImpListFilled = true;
+            break;
+        }
+    }
+
 }
 
 
