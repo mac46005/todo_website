@@ -56,3 +56,64 @@
     text-align: center;
     font-size: 1.2rem;
 }
+
+.square{
+    position: absolute;
+    top: 26%;
+    left: 32.5%;
+    width: 20px;
+    height: 20px;
+    background: red;
+}
+
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+#square1{
+    opacity: 0;
+    animation: appear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 5s;
+}
+#square2{
+    opacity: 0;
+    top: 36.7%;
+    animation: appear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 7s;
+}
+#square3{
+    opacity: 0;
+    top: 47.5%;
+    animation: appear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 9s;
+}
+#square4{
+    opacity: 0;
+    top: 60.4%;
+    animation: appear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 11s;
+}
+#square5{
+    opacity: 0;
+    top: 72.8%;
+    animation: appear;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-delay: 13s;
+}
