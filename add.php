@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -39,7 +40,7 @@
 
         <main>
             <div class="content-container">
-                <form action="">
+                <form action="./script/addItem.php">
                     <legend>Add ToDo Item</legend>
                     <label for="description">Description:</label>
                     <input type="text" name="description" id="description" onkeydown="chkDescription(this);" onkeyup="chkDescription(this);">
