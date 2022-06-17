@@ -21,8 +21,8 @@
                     <h4>ToDo List</h4>
                 </a>
                 <ul class="nav-menu">
-                    <li><a href="./currentList.html">Current List</a></li>
-                    <li><a href="./history.html">History</a></li>
+                    <li><a href="./currentList.php">Current List</a></li>
+                    <li><a href="./history.php">History</a></li>
                     <li><a id="addBtn" href="./add.html">Add</a></li>
                 </ul>
             </div>
@@ -47,8 +47,6 @@
                             <th scope="col">Desctiption</th>
                             <th scope="col">Due</th>
                             <th scope="col">Date Created</th>
-                            <th scope="col">Completed</th>
-                            <th scope="col">Completed date</th>
                             <th scope="col">Edit</a></th>
                             <th scope="col">Delete</th>
                         </tr>
@@ -62,11 +60,14 @@
                         $dbName = "todolistdb";
 
                         $conn = new mysqli($servername,$username,$password,$dbName);
-                        $sql = "SELECT description, duedate, importanceLevel FROM todo_items";
+                        $sql = "SELECT description, duedate,  datecreated,importanceLevel FROM todo_items";
 
                         if($result = $conn->query($sql)){
                             while($row = $result->fetch_row()){
-                                echo $row[0]. " " . $row[1] . " " . $row[2] . "<br/>";
+                                echo '<tr class="' . $row[3] . '">';
+                                echo '<td>' . $row[0] . '</td>';
+                                echo '<td>' . $row[1] . '</td>';
+                                echo '<td>' . $row[2] . '</td>';
                             }
                         }
                         ?>
