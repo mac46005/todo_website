@@ -54,15 +54,22 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Take Nap</td>
-                            <td>6/15/2022 2200hrs</td>
-                            <td>6/15/2022 600hrs</td>
-                            <td>FALSE</td>
-                            <td>N/A</td>
-                            <td><button><a href="">Edit</a></button></td>
-                            <td><button><a href="">Delete</a></button></td>
-                        </tr>
+                        <?php
+                        $conn;
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbName = "todolistdb";
+
+                        $conn = new mysqli($servername,$username,$password,$dbName);
+                        $sql = "SELECT description, duedate, importanceLevel FROM todo_items";
+
+                        if($result = $conn->query($sql)){
+                            while($row = $result->fetch_row()){
+                                echo $row[0]. " " . $row[1] . " " . $row[2] . "<br/>";
+                            }
+                        }
+                        ?>
                     </tbody>
 
                 </table>
