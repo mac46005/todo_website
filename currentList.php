@@ -41,18 +41,20 @@
 
         <main>
             <div class="content-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th scope="col">Desctiption</th>
-                            <th scope="col">Due</th>
-                            <th scope="col">Date Created</th>
-                            <th scope="col">Edit</a></th>
-                            <th scope="col">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
+                <form action="<?php $_SERVER['PHP_SELF']?>">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Complete</th>
+                                <th scope="col">Desctiption</th>
+                                <th scope="col">Due</th>
+                                <th scope="col">Date Created</th>
+                                <th scope="col">Edit</a></th>
+                                <th scope="col">Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php
                         $conn;
                         $servername = "localhost";
                         $username = "root";
@@ -60,20 +62,23 @@
                         $dbName = "todolistdb";
 
                         $conn = new mysqli($servername,$username,$password,$dbName);
-                        $sql = "SELECT description, duedate,  datecreated,importanceLevel FROM todo_items";
+                        $sql = "SELECT id,description, duedate,  datecreated,importanceLevel FROM todo_items WHERE isDone = FALSE";
 
                         if($result = $conn->query($sql)){
                             while($row = $result->fetch_row()){
-                                echo '<tr class="' . $row[3] . '">';
-                                echo '<td>' . $row[0] . '</td>';
+                                echo '<tr class="' . $row[4] . '">';
+                                echo '<td><button type="submit"  name="" id="" ><a href="./script/markComplete.php?id='. $row[0] . '">x</a></button></td>';
                                 echo '<td>' . $row[1] . '</td>';
                                 echo '<td>' . $row[2] . '</td>';
+                                echo '<td>' . $row[3] . '</td>';
                             }
                         }
                         ?>
-                    </tbody>
+                        </tbody>
 
-                </table>
+                    </table>
+                </form>
+
             </div>
         </main>
 
