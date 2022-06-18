@@ -38,6 +38,7 @@
                             <th scope="col">Due</th>
                             <th scope="col">Date Created</th>
                             <th scope="col">Completed date</th>
+                            <th scope="col">Mark as Uncomplete</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -61,6 +62,7 @@
                                     echo "<td>$row[2]</td>";
                                     echo "<td>$row[3]</td>";
                                     echo "<td>$row[4]</td>";
+                                    echo "<td><a href='./script/chngToInComplete.php?id=$row[0]'>Chng</a></td>";
                                     echo "</tr>";
                                 }
                             }
