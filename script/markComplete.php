@@ -9,9 +9,14 @@ $dbName = "todolistdb";
 
 try{
     $conn = new mysqli($servername,$username,$password,$dbName);
-    $sql = "UPDATE todo_items SET isDone = TRUE WHERE id = " . $id;
-    $conn->query($sql);
-    echo "Item marked for completion";
+    $today = date("Y-m-d H:i:s"); // MYsql DATETIME format YYYY-MM-DD HR:MM:SS
+    $sql = "UPDATE todo_items SET isDone = TRUE, dateCompleted = " . $today . " WHERE id = " . $id;
+    
+    if($conn->query($sql)){
+        header("location:../currentList.php");
+    }else{
+        throw "An error occurred while marking the item is complete";
+    }
 }catch(\Throwable $ex){
     throw $ex;
 }

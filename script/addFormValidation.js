@@ -6,7 +6,9 @@ var elAddBtn = document.querySelector("#addFormButton");
 
 function chkDescription(el) {
   if (el.value !== "") {
-    isDescriptionFilled = isPatternMatch(/^[A-Za-z0-9]*$/, el.value);
+    isDescriptionFilled = true;
+  }else{
+    isDescriptionFilled = false;
   }
 
   enableAddBtn();

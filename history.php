@@ -43,13 +43,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Take Nap</td>
-                            <td>6/15/2022 2200hrs</td>
-                            <td>6/15/2022 600hrs</td>
-                            <td>FALSE</td>
-                            <td>N/A</td>
-                        </tr>
+                        <?php
+                        $server = "localhost";
+                        $username = "root";
+                        $password = "";
+                        $dbName = "todolistdb";
+                        try {
+                            $conn = new mysqli($server,$username,$password,$dbName);
+                            $sql = "SELECT description, dueDate, dateCreated, ";
+
+                        } catch (\Throwable $th) {
+                            //throw $th;
+                        }
+                        ?>
                     </tbody>
 
                 </table>
