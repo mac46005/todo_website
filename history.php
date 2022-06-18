@@ -37,7 +37,6 @@
                             <th scope="col">Desctiption</th>
                             <th scope="col">Due</th>
                             <th scope="col">Date Created</th>
-                            <th scope="col">Completed</th>
                             <th scope="col">Completed date</th>
                         </tr>
                     </thead>
@@ -53,7 +52,18 @@
                         $dbName = "todolistdb";
                         try {
                             $conn = new mysqli($server,$username,$password,$dbName);
-                            $sql = "SELECT description, dueDate, dateCreated, ";
+                            $sql = "SELECT id,description, dueDate, dateCreated, dateCompleted FROM todo_items WHERE isDone = TRUE ";
+
+                            if($result = $conn->query($sql)){
+                                while($row = $result->fetch_row()){
+                                    echo "<tr>";
+                                    echo "<td>$row[1]</td>";
+                                    echo "<td>$row[2]</td>";
+                                    echo "<td>$row[3]</td>";
+                                    echo "<td>$row[4]</td>";
+                                    echo "</tr>";
+                                }
+                            }
 
                         } catch (\Throwable $th) {
                             //throw $th;
