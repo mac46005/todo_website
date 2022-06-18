@@ -1,4 +1,4 @@
 <?php
-$arr = array('Hello', 'this', 'is', 'a', 'test');
-echo implode(" ", $arr);
+$date = date("Y-m-d");
+echo $date;
 ?>
